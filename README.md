@@ -22,43 +22,43 @@ Tool-Menu made in python
 #### [1] Information Gathering:
 
 
-#### [01] Portscanner
+- [01] Portscanner
 
 
-#### [02] Hostname to Ip addres lookup
+- [02] Hostname to Ip addres lookup
 
 
-#### [03] Location Tracker
+-  [03] Location Tracker
 
 
-#### [04] Header Finder
+-  [04] Header Finder
 
 
-#### [05] Google Dorking Searcher
+-  [05] Google Dorking Searcher
 
 
-#### [06] Vulnerability Searcher
+-  [06] Vulnerability Searcher
 
 
-#### [07] Python Wifi Passowrd Extracter
+-  [07] Python Wifi Passowrd Extracter
 
 
-#### [08] Scan A Users server
+-  [08] Scan A Users server
 
 
-#### [09] Other Comands
+-  [09] Other Comands
 
 
-[2] Password Attacks:
+#### [2] Password Attacks:
 
 
-[09] Ftp BruteForce Attack
+#####[09] Ftp BruteForce Attack
 
 
-[10] Gmail BruteForce Attack
+##### [10] Gmail BruteForce Attack
 
 
-[3] Sniffing:
+#[3] Sniffing:
 
 
 
