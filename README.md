@@ -52,91 +52,91 @@ Tool-Menu made in python
 #### [2] Password Attacks:
 
 
-#####[09] Ftp BruteForce Attack
+- [09] Ftp BruteForce Attack
 
 
-##### [10] Gmail BruteForce Attack
+-  [10] Gmail BruteForce Attack
 
 
-#[3] Sniffing:
-
-
-
-[11] Phising Gmail Toolkit
-
-
-[4] Web Hacking:
+#### [3] Sniffing:
 
 
 
-[12] DDoS Menu
+- [11] Phising Gmail Toolkit
 
 
-[13] Request Flood
-
-
-[14] SYN Flood Attack
-
-
-[15] Udp Flood
-
-
-[16] Tcp Flood
+#### [4] Web Hacking:
 
 
 
-[5] other:
+- [12] DDoS Menu
+
+
+- [13] Request Flood
+
+
+- [14] SYN Flood Attack
+
+
+- [15] Udp Flood
+
+
+- [16] Tcp Flood
 
 
 
-[17] Password Manager
-
-
-[18] Spam-app
-
-
-[19] Simple-Timer
-
-
-[20] GUI Timer
+#### [5] other:
 
 
 
-Requirments:
+- [17] Password Manager
 
 
-pyautogui
+- [18] Spam-app
 
 
-colorama
+- [19] Simple-Timer
 
 
-smtplib
+- [20] GUI Timer
 
 
-requests
+
+### Requirments:
 
 
-colorama
-
-webbrowser
+- pyautogui
 
 
-ipaddress
+- colorama
 
 
-pygeoip
-
-tkinter
+- smtplib
 
 
-cryptography
+- requests
 
 
-queue
+- colorama
+
+- webbrowser
 
 
-playsound
+- ipaddress
 
 
-scapy
+- pygeoip
+
+- tkinter
+
+
+- cryptography
+
+
+- queue
+
+
+- playsound
+
+
+- scapy
