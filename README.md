@@ -1,52 +1,52 @@
 # Tool-Menu
 Tool-Menu made in python
 
-The menu:
+## The menu:
 
-[1] Information Gathering
+### [1] Information Gathering
 
-[2] Password Attacks
+### [2] Password Attacks
 
-[3] Sniffing
+### [3] Sniffing
 
-[4] Web Hacking
+### [4] Web Hacking
 
-[5] other
-
-
+### [5] other
 
 
 
 
 
-[1] Information Gathering:
 
 
-[01] Portscanner
+#### [1] Information Gathering:
 
 
-[02] Hostname to Ip addres lookup
+#### [01] Portscanner
 
 
-[03] Location Tracker
+#### [02] Hostname to Ip addres lookup
 
 
-[04] Header Finder
+#### [03] Location Tracker
 
 
-[05] Google Dorking Searcher
+#### [04] Header Finder
 
 
-[06] Vulnerability Searcher
+#### [05] Google Dorking Searcher
 
 
-[07] Python Wifi Passowrd Extracter
+#### [06] Vulnerability Searcher
 
 
-[08] Scan A Users server
+#### [07] Python Wifi Passowrd Extracter
 
 
-[09] Other Comands
+#### [08] Scan A Users server
+
+
+#### [09] Other Comands
 
 
 [2] Password Attacks:
