@@ -11,7 +11,9 @@ Tool-Menu made in python
 
 ### [4] Web Hacking
 
-### [5] other
+### [5] Wireless Testing
+
+### [6] other
 
 
 
@@ -83,22 +85,29 @@ Tool-Menu made in python
 
 - [16] Tcp Flood
 
+- [17] Ultra Web DDoS
 
 
-#### [5] other:
+#### [5] Wireless Testing:
+
+
+  - [18] Deauthentication Attack
+  - [19] WPA2 Cracker
+
+#### [6] other:
 
 
 
-- [17] Password Manager
+- [20] Password Manager
 
 
-- [18] Spam-app
+- [21] Spam-app
 
 
-- [19] Simple-Timer
+- [22] Simple-Timer
 
 
-- [20] GUI Timer
+- [23] GUI Timer
 
 
 
