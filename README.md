@@ -126,7 +126,7 @@
 - requests
 
 
-- colorama
+
 
 - webbrowser
 
