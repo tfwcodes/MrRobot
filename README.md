@@ -12,7 +12,6 @@
 
 ### [5] Wireless Testing
 
-### [6] other
 
 
 
@@ -94,20 +93,6 @@
   - [19] Deauthentication Attack
   - [20] WPA2 Cracker
 
-#### [6] other:
-
-
-
-- [21] Password Manager
-
-
-- [22] Spam-app
-
-
-- [23] Simple-Timer
-
-
-- [24] GUI Timer
 
 
 
