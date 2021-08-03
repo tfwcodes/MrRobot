@@ -135,5 +135,8 @@
 
 - scapy
 
+- mechanize
+
+- paramiko
 
 - subprocess
