@@ -44,54 +44,60 @@
 
 
 -  [08] Scan A Users server
+-  [09]
 
 
--  [09] Other Comands
+-  [10] Other Comands
 
 
 #### [2] Password Attacks:
 
 
-- [09] Ftp BruteForce Attack
+- [11] Ftp BruteForce Attack
 
 
--  [10] Gmail BruteForce Attack
+-  [12] Gmail BruteForce Attack
+-  [13] sshBrute
+-  [14] HashCracker
+-  [15] WebBrute
+-  [16] MySql BruteForce
 
 
 #### [3] Sniffing:
 
 
 
-- [11] Phising Gmail Toolkit
+- [17] Phising Gmail Toolkit
 
 
 #### [4] Web Hacking:
 
 
 
-- [12] DDoS Menu
+- [18] DDoS Menu
 
 
-- [13] Request Flood
+- [19] Request Flood
 
 
-- [14] SYN Flood Attack
+- [20] SYN Flood Attack
 
 
-- [15] Udp Flood
+- [21] Udp Flood
 
 
-- [16] Tcp Flood
+- [21] Tcp Flood
 
-- [17] Ultra Web DDoS
+- [23] Ultra Web DDoS
 
-- [18] HTTP Flood Attack
+- [24] HTTP Flood Attack
+- [25] ICMP Flood
 
 #### [5] Wireless Testing:
 
 
-  - [19] Deauthentication Attack
-  - [20] WPA2 Cracker
+  - [26] Deauthentication Attack
+  - [27] WPA2 Cracker
 
 
 
@@ -104,13 +110,16 @@
 
 - colorama
 
+- mysql.connector
+
+
 
 - smtplib
 
 
 - requests
 
-
+- ntplib
 
 
 - webbrowser
