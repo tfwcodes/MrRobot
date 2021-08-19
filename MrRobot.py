@@ -6563,7 +6563,7 @@ while True:
                             except:
                                 print("[-] The ip is invalid")
                                 input()
-                                break
+                                exit()
 
                         def flood(ip, port):
                             global count
