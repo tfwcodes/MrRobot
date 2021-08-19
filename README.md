@@ -91,13 +91,18 @@
 - [23] Ultra Web DDoS
 
 - [24] HTTP Flood Attack
+
 - [25] ICMP Flood
+
+- [26] DNS DDoS
+
+- [27] Tcp through flooding with denied connections
 
 #### [5] Wireless Testing:
 
 
-  - [26] Deauthentication Attack
-  - [27] WPA2 Cracker
+  - [28] Deauthentication Attack
+  - [29] WPA2 Cracker
 
 
 
