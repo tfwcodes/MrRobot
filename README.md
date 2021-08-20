@@ -98,11 +98,13 @@
 
 - [27] Tcp through flooding with denied connections
 
+- [28] Slowloris
+
 #### [5] Wireless Testing:
 
 
-  - [28] Deauthentication Attack
-  - [29] WPA2 Cracker
+  - [29] Deauthentication Attack
+  - [30] WPA2 Cracker
 
 
 
