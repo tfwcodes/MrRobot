@@ -13,7 +13,7 @@
 ### [5] Wireless Testing
 
 
-### [6] Explotatio Tools:
+### [6] Explotatio Tools
 
 
 
