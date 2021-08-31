@@ -13,7 +13,7 @@
 ### [5] Wireless Testing
 
 
-
+### [6] Explotatio Tools:
 
 
 
@@ -60,52 +60,59 @@
 -  [13] sshBrute
 -  [14] HashCracker
 -  [15] WebBrute
--  [16] MySql BruteForce
+-  [16] Login Brute
+-  [17] MySql BruteForce
 
 
 #### [3] Sniffing:
 
 
 
-- [17] Phising Gmail Toolkit
+- [18] Phising Gmail Toolkit
 
 
 #### [4] Web Hacking:
 
 
 
-- [18] DDoS Menu
+- [19] DDoS Menu
 
 
-- [19] Request Flood
+- [20] Request Flood
 
 
-- [20] SYN Flood Attack
+- [21] SYN Flood Attack
 
 
-- [21] Udp Flood
+- [22] Udp Flood
 
 
-- [21] Tcp Flood
+- [23] Tcp Flood
 
-- [23] Ultra Web DDoS
+- [24] Ultra Web DDoS
 
-- [24] HTTP Flood Attack
+- [25] HTTP Flood Attack
 
-- [25] ICMP Flood
+- [26] ICMP Flood
 
-- [26] DNS DDoS
+- [27] DNS DDoS
 
-- [27] Tcp through flooding with denied connections
+- [28] Tcp through flooding with denied connections
 
-- [28] Slowloris
+- [29] Slowloris
 
 #### [5] Wireless Testing:
 
 
-  - [29] Deauthentication Attack
-  - [30] WPA2 Cracker
+  - [30] Deauthentication Attack
+  - [31] WPA2 Cracker
 
+#### [6] Explotation Tools:
+
+  - [32] Fuzzing FTP
+  - [33] Fuzzing SSH
+  - [34] SQL Scanenr
+  - [35] Remote Code Execution
 
 
 
