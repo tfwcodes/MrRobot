@@ -166,3 +166,5 @@
 - paramiko
 
 - subprocess
+
+- httplib2
