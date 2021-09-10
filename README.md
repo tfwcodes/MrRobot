@@ -113,6 +113,7 @@
   - [33] Fuzzing SSH
   - [34] SQL Scanenr
   - [35] Remote Code Execution
+  - [36] WebMenu
 
 
 
@@ -155,6 +156,8 @@
 
 - playsound
 
+
+- cloudscrapper
 
 - scapy
 
