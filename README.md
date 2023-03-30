@@ -1,5 +1,24 @@
 # MrRobot
 
+## How to use:
+<details>
+<summary>Click me</summary>
+<br>
+
+* apt-get install python3
+* apt-get install git
+* git clone https://github.com/tfwcodes/MrRobot
+* ls
+* cd MrRobot
+* pip install -r requirements.txt
+* Python3 MrRobot.py
+
+</details>
+
+
+
+
+
 ## The menu:
 
 ### [1] Information Gathering
