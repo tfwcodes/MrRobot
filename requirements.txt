@@ -1,0 +1,7 @@
+cloudscraper
+pyautogui
+paramiko
+colorama
+mysql.connector
+ipaddress
+pygeoip
